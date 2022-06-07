@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'customslider.dart';
 import 'header_profile.dart';
+import 'offer_heading.dart';
+import 'search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,19 +17,19 @@ class HomeScreen extends StatelessWidget {
         horizontal: 20,
         vertical: 30,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const HeaderProfile(),
-          const SizedBox(
-            height: 20,
-          ),
-          Row(
-            children: [
-              Icon(Icons.search),
-            ],
-          )
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const HeaderProfile(),
+            const SizedBox(height: 20),
+            const SearchBar(),
+            const SizedBox(height: 20),
+            const OfferHeading(),
+            const SizedBox(height: 20),
+            const CustomSlider(),
+          ],
+        ),
       ),
     );
   }
