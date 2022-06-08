@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/custom_text.dart';
-import 'carosel_dot.dart';
 
 class SingleSlide extends StatelessWidget {
   const SingleSlide({
@@ -66,7 +65,6 @@ class SingleSlide extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            CaroselDot(slider: slider, slideIndex: slideIndex),
           ],
         ),
       ),
