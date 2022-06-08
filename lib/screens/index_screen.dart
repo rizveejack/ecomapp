@@ -27,10 +27,10 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: _screens[_pageIndex],
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 5,
+        elevation: 0,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white24.withOpacity(0.6),
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.black87,
         unselectedItemColor: Colors.black54.withOpacity(0.2),

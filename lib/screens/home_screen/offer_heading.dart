@@ -5,7 +5,12 @@ import '../../widgets/custom_text.dart';
 class OfferHeading extends StatelessWidget {
   const OfferHeading({
     Key? key,
+    required this.headingText,
+    required this.allText,
   }) : super(key: key);
+
+  final String headingText;
+  final String allText;
 
   @override
   Widget build(BuildContext context) {
@@ -13,16 +18,16 @@ class OfferHeading extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const CustomText(
-          text: "Special Offers",
+        CustomText(
+          text: headingText,
           size: 22,
           isHeading: true,
           textColor: Colors.black,
         ),
         InkWell(
           onTap: () {},
-          child: const CustomText(
-            text: "All offer",
+          child: CustomText(
+            text: allText,
             size: 12,
             isHeading: true,
             textColor: Colors.black,

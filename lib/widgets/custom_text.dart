@@ -18,6 +18,7 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
+        height: 1.2,
         fontSize: size,
         fontWeight: isHeading ? FontWeight.bold : FontWeight.normal,
         color: textColor,
