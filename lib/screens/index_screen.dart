@@ -67,7 +67,7 @@ class _MainScreenState extends State<MainScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Icon(
-                  Icons.shopping_bag_rounded,
+                  Icons.search_rounded,
                 ),
                 Container(
                   width: 5,
@@ -109,7 +109,7 @@ class _MainScreenState extends State<MainScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Icon(
-                  Icons.account_balance_wallet_rounded,
+                  Icons.favorite_rounded,
                 ),
                 Container(
                   width: 5,

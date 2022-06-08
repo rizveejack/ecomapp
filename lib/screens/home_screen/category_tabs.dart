@@ -58,11 +58,13 @@ class _CategoryTabState extends State<CategoryTab> {
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 30,
-                mainAxisSpacing: 30,
-                childAspectRatio: 0.55),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              childAspectRatio: MediaQuery.of(context).size.width /
+                  (MediaQuery.of(context).size.height),
+            ),
             itemBuilder: (_, index) {
               return SizedBox(
                 width: double.infinity,
@@ -77,8 +79,9 @@ class _CategoryTabState extends State<CategoryTab> {
                       ),
                     ),
                     const CustomText(
+                      isellipsis: true,
                       text: "Product name like as bal sal",
-                      size: 16,
+                      size: 14,
                       textColor: Colors.black,
                     ),
                     const SizedBox(

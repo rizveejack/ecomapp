@@ -10,10 +10,12 @@ class PopulearCategory extends StatelessWidget {
     return GridView.builder(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
         crossAxisSpacing: 5,
         mainAxisSpacing: 5,
+        childAspectRatio: MediaQuery.of(context).size.width /
+            (MediaQuery.of(context).size.height),
       ),
       itemCount: 8,
       itemBuilder: (_, index) {
@@ -34,7 +36,7 @@ class PopulearCategory extends StatelessWidget {
                 height: 5,
               ),
               const CustomText(
-                text: "Cloth",
+                text: "Clothing",
                 size: 12,
                 textColor: Colors.black,
                 isHeading: true,

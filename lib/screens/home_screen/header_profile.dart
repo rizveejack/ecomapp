@@ -9,10 +9,13 @@ class HeaderProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width / 5;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
               width: 50,
@@ -23,9 +26,6 @@ class HeaderProfile extends StatelessWidget {
                     image: AssetImage("assets/images/man.jpg"),
                     fit: BoxFit.fitHeight),
               ),
-            ),
-            const SizedBox(
-              width: 20,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

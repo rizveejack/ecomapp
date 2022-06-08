@@ -16,24 +16,27 @@ class SearchBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(
-            Icons.search,
-            color: Colors.grey.withOpacity(0.9),
-          ),
           Expanded(
             child: TextFormField(
+              cursorColor: Colors.black.withOpacity(0.3),
               decoration: const InputDecoration(
-                enabledBorder: InputBorder.none,
-                hintText: 'Even Densed TextFiled',
+                border: InputBorder.none,
+                hintText: 'Search your product..',
+                hintStyle: TextStyle(fontSize: 14),
+
                 isDense: true, // Added this
                 contentPadding: EdgeInsets.symmetric(horizontal: 10),
               ),
             ),
           ),
-          Icon(
-            Icons.equalizer,
-            color: Colors.grey.withOpacity(0.9),
+          InkWell(
+            child: Icon(
+              Icons.search,
+              color: Colors.grey.withOpacity(0.9),
+            ),
           ),
         ],
       ),
