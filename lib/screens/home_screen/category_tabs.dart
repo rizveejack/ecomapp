@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/custom_text.dart';
+import '../../widgets/product_card.dart';
 
 class CategoryTab extends StatefulWidget {
   const CategoryTab({Key? key}) : super(key: key);
@@ -54,87 +55,19 @@ class _CategoryTabState extends State<CategoryTab> {
         ),
         SizedBox(
           child: GridView.builder(
-            itemCount: 8,
+            itemCount: 26,
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
-              childAspectRatio: 3 / 5,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              mainAxisExtent: 280,
+              // childAspectRatio: 6 / 9,
             ),
             itemBuilder: (_, index) {
-              return SizedBox(
-                width: double.infinity,
-                height: double.infinity,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Card(
-                      child: Image.asset(
-                        "assets/images/banner.png",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    const CustomText(
-                      isellipsis: true,
-                      text: "Product name like as bal sal",
-                      size: 14,
-                      textColor: Colors.black,
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: const [
-                            Icon(
-                              Icons.star,
-                              size: 18,
-                            ),
-                            CustomText(
-                              text: "4.5",
-                              size: 13,
-                              textColor: Colors.black,
-                            ),
-                          ],
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 10),
-                          height: 13,
-                          width: 2,
-                          color: Colors.black,
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 5, vertical: 3),
-                          decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.3),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: const CustomText(
-                            text: "6,937 sold",
-                            size: 12,
-                            textColor: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const CustomText(
-                      text: "\$430.00",
-                      size: 18,
-                      isHeading: true,
-                      textColor: Colors.black,
-                    ),
-                  ],
-                ),
-              );
+              return const ProductCard();
             },
           ),
         ),

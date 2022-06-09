@@ -8,15 +8,17 @@ class PopulearCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      physics: const NeverScrollableScrollPhysics(),
+      itemCount: 8,
       shrinkWrap: true,
+      scrollDirection: Axis.vertical,
+      physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
-        crossAxisSpacing: 5,
-        mainAxisSpacing: 5,
-        childAspectRatio: 3 / 4,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        mainAxisExtent: 80,
+        // childAspectRatio: 6 / 9,
       ),
-      itemCount: 8,
       itemBuilder: (_, index) {
         return InkWell(
           onTap: () {},

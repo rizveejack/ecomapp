@@ -47,7 +47,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: Container(
               height: 30,
               width: 30,
-              margin: const EdgeInsets.only(top: 30, right: 10),
+              margin: const EdgeInsets.only(top: 45, right: 10),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(100),
