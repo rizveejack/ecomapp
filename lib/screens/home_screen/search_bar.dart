@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../search_screen/search_screen.dart';
+
 class SearchBar extends StatelessWidget {
   const SearchBar({
     Key? key,
@@ -33,6 +35,14 @@ class SearchBar extends StatelessWidget {
             ),
           ),
           InkWell(
+            onTap: (() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) {
+                  return const SearchScren();
+                }),
+              );
+            }),
             child: Icon(
               Icons.search,
               color: Colors.grey.withOpacity(0.9),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'custom_text.dart';
 
-class SpecialOffer extends StatelessWidget {
-  const SpecialOffer({
+class SpecialOfferCard extends StatelessWidget {
+  const SpecialOfferCard({
     Key? key,
   }) : super(key: key);
 
@@ -54,15 +54,16 @@ class SpecialOffer extends StatelessWidget {
           Container(
             width: 140,
             decoration: const BoxDecoration(
+              // color: Colors.red,
               borderRadius: BorderRadius.only(
-                topRight: Radius.circular(10),
-                bottomRight: Radius.circular(10),
+                topRight: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
               image: DecorationImage(
                 image: AssetImage(
                   "assets/images/banner.png",
                 ),
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               ),
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/custom_text.dart';
+import '../notification_screen/notification_screen.dart';
 
 class HeaderProfile extends StatelessWidget {
   const HeaderProfile({
@@ -9,61 +10,62 @@ class HeaderProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width / 5;
-
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                image: const DecorationImage(
-                    image: AssetImage("assets/images/man.jpg"),
-                    fit: BoxFit.fitHeight),
-              ),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CustomText(
-                  text: "Good Morning",
-                  size: 15,
-                  textColor: Colors.black.withOpacity(0.4),
+    return Container(
+      margin: const EdgeInsets.only(top: 50),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(right: 10),
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  image: const DecorationImage(
+                      image: AssetImage("assets/images/man.jpg"),
+                      fit: BoxFit.fitHeight),
                 ),
-                CustomText(
-                  text: "Andrew Gorfild",
-                  size: 17,
-                  isHeading: true,
-                  textColor: Colors.black.withOpacity(0.7),
-                ),
-              ],
-            )
-          ],
-        ),
-        Row(
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                color: Colors.black.withOpacity(0.4),
               ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                    text: "Good Morning",
+                    size: 14,
+                    textColor: Colors.black.withOpacity(0.4),
+                  ),
+                  CustomText(
+                    text: "Andrew Gorfild",
+                    size: 15,
+                    isHeading: true,
+                    textColor: Colors.black.withOpacity(0.7),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) {
+                  return const NotificationScreen();
+                }),
+              );
+            },
+            icon: Icon(
+              Icons.notifications_active_rounded,
+              color: Colors.black.withOpacity(0.4),
             ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.notifications_active_rounded,
-                color: Colors.black.withOpacity(0.4),
-              ),
-            )
-          ],
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

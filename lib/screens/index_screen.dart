@@ -1,9 +1,10 @@
 import 'package:ecomapp/screens/cart_screen/cart_screen.dart';
 import 'package:ecomapp/screens/home_screen/home_screen.dart';
-import 'package:ecomapp/screens/order_screen/order_screen.dart';
 import 'package:ecomapp/screens/profile_screen/profile_screen.dart';
-import 'package:ecomapp/screens/wallet_screen/wallet_screen.dart';
+import 'package:ecomapp/screens/wishlist_screen/wishlist_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'all_products/all_products_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -16,9 +17,9 @@ class _MainScreenState extends State<MainScreen> {
   late int _pageIndex = 0;
   final _screens = <Widget>[
     const HomeScreen(),
+    const AllProductsScreen(),
     const CartScreen(),
-    const OrderScreen(),
-    const WalletScreen(),
+    const WishlistScreen(),
     const ProfileScreen(),
   ];
 
@@ -67,7 +68,7 @@ class _MainScreenState extends State<MainScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Icon(
-                  Icons.search_rounded,
+                  Icons.store_rounded,
                 ),
                 Container(
                   width: 5,

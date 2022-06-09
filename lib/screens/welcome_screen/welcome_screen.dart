@@ -1,3 +1,4 @@
+import 'package:ecomapp/screens/index_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'carosel_dot.dart';
@@ -40,6 +41,29 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           Align(
             alignment: Alignment.bottomCenter,
             child: CaroselDot(slider: slider, slideIndex: _pageIndex),
+          ),
+          Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              height: 30,
+              width: 30,
+              margin: const EdgeInsets.only(top: 30, right: 10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) {
+                      return const MainScreen();
+                    }),
+                  );
+                },
+                child: const Icon(Icons.close),
+              ),
+            ),
           ),
         ],
       ),

@@ -10,12 +10,11 @@ class PopulearCategory extends StatelessWidget {
     return GridView.builder(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
         crossAxisSpacing: 5,
         mainAxisSpacing: 5,
-        childAspectRatio: MediaQuery.of(context).size.width /
-            (MediaQuery.of(context).size.height),
+        childAspectRatio: 3 / 4,
       ),
       itemCount: 8,
       itemBuilder: (_, index) {

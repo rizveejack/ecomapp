@@ -58,12 +58,11 @@ class _CategoryTabState extends State<CategoryTab> {
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 20,
               mainAxisSpacing: 20,
-              childAspectRatio: MediaQuery.of(context).size.width /
-                  (MediaQuery.of(context).size.height),
+              childAspectRatio: 3 / 5,
             ),
             itemBuilder: (_, index) {
               return SizedBox(

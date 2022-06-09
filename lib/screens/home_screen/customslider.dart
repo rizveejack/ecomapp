@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/special_offer.dart';
+import '../../widgets/special_offer_card.dart';
 
 class CustomSlider extends StatefulWidget {
   const CustomSlider({
@@ -38,7 +38,7 @@ class _CustomSliderState extends State<CustomSlider> {
                   itemCount: _slider.length,
                   onPageChanged: onSlideChange,
                   itemBuilder: (_, index) {
-                    return const SpecialOffer();
+                    return const SpecialOfferCard();
                   })),
           Align(
             alignment: Alignment.bottomCenter,

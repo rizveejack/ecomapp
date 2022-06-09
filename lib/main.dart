@@ -1,6 +1,5 @@
+import 'package:ecomapp/screens/welcome_screen/welcome_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'screens/index_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: MainScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

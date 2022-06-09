@@ -7,10 +7,12 @@ class OfferHeading extends StatelessWidget {
     Key? key,
     required this.headingText,
     required this.allText,
+    required this.routePage,
   }) : super(key: key);
 
   final String headingText;
   final String allText;
+  final Widget routePage;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,14 @@ class OfferHeading extends StatelessWidget {
           textColor: Colors.black,
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) {
+                return routePage;
+              }),
+            );
+          },
           child: CustomText(
             text: allText,
             size: 12,
