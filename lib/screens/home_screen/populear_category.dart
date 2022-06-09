@@ -20,30 +20,31 @@ class PopulearCategory extends StatelessWidget {
         // childAspectRatio: 6 / 9,
       ),
       itemBuilder: (_, index) {
-        return InkWell(
-          onTap: () {},
-          child: Column(
-            children: [
-              Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.6),
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                child: const Icon(Icons.search),
+        return Column(
+          children: [
+            Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.grey.withOpacity(0.6),
+                borderRadius: BorderRadius.circular(100),
               ),
-              const SizedBox(
-                height: 5,
+              child: IconButton(
+                padding: EdgeInsets.zero,
+                icon: const Icon(Icons.search),
+                onPressed: () {},
               ),
-              const CustomText(
-                text: "Clothing",
-                size: 12,
-                textColor: Colors.black,
-                isHeading: true,
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            const CustomText(
+              text: "Clothing",
+              size: 12,
+              textColor: Colors.black,
+              isHeading: true,
+            ),
+          ],
         );
       },
     );

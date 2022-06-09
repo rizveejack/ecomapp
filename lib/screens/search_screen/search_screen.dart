@@ -12,17 +12,17 @@ class SearchScren extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Colors.white,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.black54,
           size: 18,
         ),
-        title: CustomText(
+        title: const CustomText(
           text: "Search Result",
           size: 16,
           textColor: Colors.black54,
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Text("Search Screen"),
       ),
     );

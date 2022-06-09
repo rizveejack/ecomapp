@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/custom_text.dart';
+import '../../widgets/app_bar_heading.dart';
 
 class ShopHeader extends StatelessWidget {
   const ShopHeader({
@@ -12,23 +12,13 @@ class ShopHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            CustomText(
-              text: "Shop Products",
-              size: 25,
-              textColor: Colors.black87,
-            ),
-            CustomText(
-              text: "Check your Products",
-              size: 15,
-              textColor: Colors.black45,
-            ),
-          ],
+        const AppBarHeading(
+          title: 'Shop Products.',
+          subTitle: "Check your products.",
         ),
         IconButton(
           onPressed: () {},
+          padding: EdgeInsets.zero,
           icon: const Icon(Icons.filter_list_rounded),
         ),
       ],

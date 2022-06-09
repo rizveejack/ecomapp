@@ -26,8 +26,8 @@ class OfferHeading extends StatelessWidget {
           isHeading: true,
           textColor: Colors.black,
         ),
-        InkWell(
-          onTap: () {
+        TextButton(
+          onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (_) {

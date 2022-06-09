@@ -13,14 +13,40 @@ class ProductCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 180,
-            decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.6),
-                borderRadius: BorderRadius.circular(20),
-                image: const DecorationImage(
-                    image: AssetImage("assets/images/banner.png"),
-                    fit: BoxFit.fitHeight)),
+          Stack(
+            children: [
+              Align(
+                child: Container(
+                  height: 180,
+                  decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.6),
+                      borderRadius: BorderRadius.circular(20),
+                      image: const DecorationImage(
+                          image: AssetImage("assets/images/banner.png"),
+                          fit: BoxFit.fitHeight)),
+                ),
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  margin: const EdgeInsets.only(top: 5, right: 5),
+                  width: 25,
+                  height: 25,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: IconButton(
+                    padding: EdgeInsets.zero,
+                    alignment: Alignment.center,
+                    color: Colors.white,
+                    iconSize: 15,
+                    onPressed: () {},
+                    icon: const Icon(Icons.favorite_outline_rounded),
+                  ),
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 10),
           const CustomText(

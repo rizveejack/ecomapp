@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Poppins",
         scaffoldBackgroundColor: Colors.white,
+        primarySwatch: Colors.grey,
       ),
-      home: WelcomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
