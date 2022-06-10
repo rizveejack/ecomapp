@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../screens/single_product_screen/single_product_screen.dart';
 import 'custom_text.dart';
 
 class ProductCard extends StatelessWidget {
@@ -16,14 +17,28 @@ class ProductCard extends StatelessWidget {
           Stack(
             children: [
               Align(
-                child: Container(
-                  height: 180,
-                  decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.6),
-                      borderRadius: BorderRadius.circular(20),
-                      image: const DecorationImage(
-                          image: AssetImage("assets/images/banner.png"),
-                          fit: BoxFit.fitHeight)),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) {
+                        return const SingleProductScreen();
+                      }),
+                    );
+                  },
+                  child: Hero(
+                    tag: "product",
+                    child: Container(
+                      height: 180,
+                      decoration: BoxDecoration(
+                        color: Colors.grey.withOpacity(0.6),
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                            image: AssetImage("assets/images/banner.png"),
+                            fit: BoxFit.fitHeight),
+                      ),
+                    ),
+                  ),
                 ),
               ),
               Align(
