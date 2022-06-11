@@ -26,17 +26,14 @@ class ProductCard extends StatelessWidget {
                       }),
                     );
                   },
-                  child: Hero(
-                    tag: "product",
-                    child: Container(
-                      height: 180,
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.6),
-                        borderRadius: BorderRadius.circular(10),
-                        image: const DecorationImage(
-                            image: AssetImage("assets/images/banner.png"),
-                            fit: BoxFit.fitHeight),
-                      ),
+                  child: Container(
+                    height: 180,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.6),
+                      borderRadius: BorderRadius.circular(10),
+                      image: const DecorationImage(
+                          image: AssetImage("assets/images/banner.png"),
+                          fit: BoxFit.fitHeight),
                     ),
                   ),
                 ),

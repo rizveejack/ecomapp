@@ -10,12 +10,7 @@ class ProductHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(bottom: 20),
-      decoration: const BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: Colors.black, width: 1),
-        ),
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
           Row(
@@ -29,9 +24,10 @@ class ProductHeading extends StatelessWidget {
                 isellipsis: true,
               ),
               IconButton(
-                  padding: const EdgeInsets.all(0),
-                  onPressed: () {},
-                  icon: const Icon(Icons.favorite_outline_rounded))
+                padding: const EdgeInsets.all(0),
+                onPressed: () {},
+                icon: const Icon(Icons.favorite_outline_rounded),
+              )
             ],
           ),
           Row(
@@ -39,7 +35,7 @@ class ProductHeading extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
                 decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.5),
+                  color: Colors.grey.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: const CustomText(
@@ -60,6 +56,15 @@ class ProductHeading extends StatelessWidget {
                 textColor: Colors.black,
               ),
             ],
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 20),
+            decoration: BoxDecoration(
+              border: Border(
+                bottom:
+                    BorderSide(color: Colors.grey.withOpacity(0.2), width: 2),
+              ),
+            ),
           ),
         ],
       ),

@@ -31,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
         elevation: 0,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        backgroundColor: Colors.white24.withOpacity(0.6),
+        backgroundColor: Colors.transparent,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.black87,
         unselectedItemColor: Colors.black54.withOpacity(0.2),

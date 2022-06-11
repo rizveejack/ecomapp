@@ -19,7 +19,6 @@ class AllProductsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             ShopHeader(),
-            SizedBox(height: 20),
             ShopProducts(),
           ],
         ),
