@@ -2,6 +2,7 @@ import 'package:ecomapp/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 import 'proced_to_checkout.dart';
+import 'product_counter.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -149,38 +150,14 @@ class CartScreen extends StatelessWidget {
                                           textColor: Colors.black87,
                                         ),
                                         Container(
-                                          width: 100,
+                                          width: 80,
                                           height: 25,
                                           decoration: BoxDecoration(
                                             color: Colors.grey.shade100,
                                             borderRadius:
                                                 BorderRadius.circular(10),
                                           ),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              InkWell(
-                                                onTap: () {},
-                                                child: const Icon(
-                                                  Icons.add,
-                                                  size: 14,
-                                                ),
-                                              ),
-                                              const CustomText(
-                                                text: "1",
-                                                size: 12,
-                                                textColor: Colors.black87,
-                                              ),
-                                              InkWell(
-                                                onTap: () {},
-                                                child: const Icon(
-                                                  Icons.remove,
-                                                  size: 14,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
+                                          child: const ProductCounter(),
                                         ),
                                       ],
                                     ),
@@ -198,7 +175,7 @@ class CartScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomSheet: ProcedToCheckout(),
+      bottomSheet: const ProcedToCheckout(),
     );
   }
 }

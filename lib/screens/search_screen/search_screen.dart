@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/custom_text.dart';
-
 class SearchScren extends StatelessWidget {
   const SearchScren({Key? key}) : super(key: key);
 
@@ -16,14 +14,41 @@ class SearchScren extends StatelessWidget {
           color: Colors.black54,
           size: 18,
         ),
-        title: const CustomText(
-          text: "Search Result",
-          size: 16,
-          textColor: Colors.black54,
+        title: Container(
+          width: double.maxFinite,
+          height: 40,
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Colors.grey.withOpacity(0.3),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: TextFormField(
+                  cursorColor: Colors.black.withOpacity(0.3),
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Search your product..',
+                    hintStyle: TextStyle(fontSize: 14),
+
+                    isDense: true, // Added this
+                    contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                  ),
+                ),
+              ),
+              Icon(
+                Icons.search,
+                color: Colors.grey.withOpacity(0.9),
+              ),
+            ],
+          ),
         ),
       ),
-      body: const Center(
-        child: Text("Search Screen"),
+      body: Center(
+        child: Text("Search Page"),
       ),
     );
   }

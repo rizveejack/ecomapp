@@ -9,7 +9,7 @@ class ProductImageSlider extends StatefulWidget {
 
 class _ProductImageSliderState extends State<ProductImageSlider> {
   final List _slider = <String>[
-    "assets/images/slide1.jpg",
+    "assets/images/banner.jpg",
     "assets/images/slide2.jpg",
     "assets/images/slide3.jpg",
   ];

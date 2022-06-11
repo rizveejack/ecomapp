@@ -51,7 +51,7 @@ class ProcedToCheckout extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       CustomText(
-                        text: "Go To Checkout",
+                        text: "Checkout",
                         size: 15,
                         textColor: Colors.black87,
                       ),
