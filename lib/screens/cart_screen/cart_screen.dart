@@ -1,7 +1,8 @@
 import 'package:ecomapp/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
-import 'proced_to_checkout.dart';
+import '../../widgets/custom_bottom_sheet.dart';
+import '../checkout_screen/checkout_screen.dart';
 import 'product_counter.dart';
 
 class CartScreen extends StatelessWidget {
@@ -175,7 +176,24 @@ class CartScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomSheet: const ProcedToCheckout(),
+      bottomSheet: CustomBottonSheet(
+        buttonText: "Checkout",
+        icon: const Icon(
+          Icons.shopping_cart,
+          color: Colors.white,
+          size: 16,
+        ),
+        price: "\$4230.00",
+        priceHeading: "Total Price",
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) {
+              return const CheckoutScreen();
+            }),
+          );
+        },
+      ),
     );
   }
 }

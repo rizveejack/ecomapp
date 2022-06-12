@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'bottom_price.dart';
+import '../../widgets/custom_bottom_sheet.dart';
 import 'product_colors.dart';
 import 'product_details.dart';
 import 'product_heading.dart';
@@ -37,7 +37,16 @@ class SingleProductScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomSheet: const BottomPrice(),
+      bottomSheet: const CustomBottonSheet(
+        buttonText: "AddtoCart",
+        icon: Icon(
+          Icons.shopping_bag,
+          color: Colors.white,
+          size: 16,
+        ),
+        price: "\$4230.00",
+        priceHeading: "Price",
+      ),
     );
   }
 }
